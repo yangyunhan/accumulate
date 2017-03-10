@@ -6,18 +6,18 @@ body{
     background-color: #DEDEDE;
 }
 header{
-    background-color: #333333;
-    font-size: 12px;
     height: 48px;
-    line-height: 48px;
     padding: 5px;
+    font-size: 12px;
+    line-height: 48px;
+    background-color: #333333;
 }
 header ul{
     float: right;
 }
 header li{
-    padding: 0 25px 0 0;
     float: left;
+    padding: 0 25px 0 0;
     color: black;
 }
 header li p{
@@ -26,17 +26,17 @@ header li p{
 header img{
     width: 118px;
     height: 36px;
-    vertical-align: middle;
     padding-left: 32px;
+    vertical-align: middle;
 }
 .content1,.content2,.content3,.content4,.content5{
-    background-color: white;
+    padding:30px 20px 35px 20px;
     margin: 20px;
     border-top: 1px solid #CECECE;
     border-left: 1px solid #CECECE;
     border-bottom: 3px solid #8B8B8B;
     border-right: 3px solid #8B8B8B;
-    padding:30px 20px 35px 20px;
+    background-color: white;
 }
 .content1 h1,.content2 h1,.content4 h1{
     font-size: 20px;
@@ -67,37 +67,40 @@ header img{
     font-size: 20px;
 }
 .content3 ul{
-    list-style-type: none;
     padding-top: 20px;
     padding-left: 35px;
+    list-style-type: none;
 }
 .content3 li{
-    border: 2px solid #DBDBDB;
     width: 120px;
     height: 120px;
     margin-bottom: 15px;
     text-align: center;
-
+    border: 2px solid #DBDBDB;
 }
 .content3 p{
-    font-size: 12px;
     padding-top: 5px;
+    font-size: 12px;
 }
 .content3{
     padding-bottom: 20px;
 }
+.content3 img{
+    width: 110px;
+    height: 90px;
+}
 .content4 ol{
+    padding-left: 35px;
     font-size: 14px;
     line-height: 180%;
-    padding-left: 35px;
 }
 .content4 p{
     font-size: 14px;
 }
 
 .head{
-    background-color: #313134;
     color: white;
+    background-color: #313134;
 }
 .tail{
     background-color: #CBCBCB;
@@ -117,12 +120,12 @@ td{
     width: 18%;
 }
 blockquote{
-    border-left: 3px solid #ccc;
     height: 35px;
     padding-left: 10px;
     line-height: 35px;
     font-size: 14px;
     font-weight: 600;
+    border-left: 3px solid #ccc;
 }
 .content5{
     padding-top: 18px;
@@ -134,23 +137,22 @@ form{
     line-height: 210%;
 }
 input{
-    font-size: 12px;
     padding-left: 3px;
     height: 20px;
     line-height: 20px;
+    font-size: 12px;
     vertical-align: middle;
     border: 1px solid #9F9F9D;
 }
 
 .style-left{
-    width: 28%;
     float: left;
+    width: 28%;
     text-align: right;
-
 }
 .style-right{
-    width: 72%;
     float: left;
+    width: 72%;
     text-align: left;
 }
 textarea{
@@ -169,18 +171,18 @@ label{
     margin-top: 5px;
     height: 37px;
     width: 100%;
-    background-color: #3355D0;
     color: white;
     font-size: 14px;
+    background-color: #3355D0;
     border-radius: 10px;
 }
 .content6{
-    color: white;
-    background-color: #333333;
     height: 70px;
-    text-align: center;
     padding-top: 15px;
     font-size: 11px;
+    color: white;
+    text-align: center;
+    background-color: #333333;
 }
 .checkbox{
     border-radius: 5px;
