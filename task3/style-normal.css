@@ -1,0 +1,99 @@
+*{margin:0;padding: 0;}
+.left-col,.content,.right-col{
+    position: relative;
+    float: left;
+    min-height: 130px;
+}
+.container1{
+    margin: 20px;
+    padding: 0 160px 0 240px;
+    overflow: hidden;
+    background: #eee;
+    border:1px solid #999;
+}
+.left-col{
+    margin-left: -100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    left: -220px;
+    width: 200px;
+    background: white;
+    border:1px solid #999;
+}
+.right-col{
+    margin-left: -140px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    right: -160px;
+    width: 120px;
+    background: white;
+    border:1px solid #999;
+}
+.content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    background: white;
+    border:1px solid #999;
+
+    font-size: 12px;
+    line-height: 100%;
+}
+.content p{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.content p:first-child{
+    padding-top: 20px;
+}
+.content p:last-child{
+    padding-bottom: 20px;
+}
+
+.left-col .logo{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 13px;
+    background-color: #eee;
+    border: 1px solid #999;
+}
+.left-col .middle{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+.left-col p{
+    margin-top: -100px;
+    margin-left: 120px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.right-col ul{
+    list-style-type: none;
+    text-align: center;
+}
+.right-col li{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #eee;
+    border: 1px solid #999;
+}
+.right-col ul:last-child{
+    margin-bottom: 20px;
+}
+.right-col .single{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
