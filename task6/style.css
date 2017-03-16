@@ -228,7 +228,17 @@
     color: #f5e327;
     font-family: "微软雅黑",sans-serif;
 }
-.font-style4{
+#left-down .font-style4{
+    margin-top: 0;
+    margin-left: 2px;
+    margin-right: 0;
+    font-size: 12px;
+    color: #767777;
+    font-family: "宋体",sans-serif;
+    line-height: 16px;
+    text-indent: 2em;
+}
+#left-down .font-style42{
     margin-top: 0;
     margin-left: 2px;
     margin-right: 0;
