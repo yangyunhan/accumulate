@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task25</title>
+    <style type="text/css">
+        *{padding:0;margin:0}
+        body{padding: 10px}
+        input{width: 200px;height: 24px}
+        button{width: 70px;height: 30px}
+        #queue{list-style: none;vertical-align: bottom}
+        #queue li{display: inline-block;
+            background: indianred;
+            border: 1px solid lightslategrey;
+            margin-right: 2px;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            width: 28px;
+        }
+    </style>
+</head>
+<body>
+<input type="number" id="input" name="num" max="100" min="10">
+<button type="button" value="左侧入" id="left-in">左侧入</button>
+<button type="button" value="右侧入" id="right-in">右侧入</button>
+<button type="button" value="左侧出" id="left-out">左侧出</button>
+<button type="button" value="右侧出" id="right-out">右侧出</button>
+<button type="button" value="排序" id="sort">排序</button>
+
+<ul id="queue">
+    <li>10</li>
+    <li>3</li>
+    <li>7</li>
+    <li>12</li>
+    <li>11</li>
+    <li>30</li>
+</ul>
+<script type="text/javascript">
+    var leftIn = document.getElementById("left-in");
+    var rightIn = document.getElementById("right-in");
+    var leftOut = document.getElementById("left-out");
+    var rightOut = document.getElementById("right-out");
+    var queues = document.getElementById("queue");
+    var lis = document.getElementsByTagName("li");
+    var num = document.getElementById("input");
+    var sort = document.getElementById("sort");
+
+    var data = [];
+    for(var m = 0;m<lis.length;m++){
+        data.push(lis[m].innerHTML);
+    }
+    function showLi(data) {
+        removeAllLi();
+        for(var j = 0;j<data.length;j++){
+            var liCreate = document.createElement("li");
+            liCreate.style.height = data[j]*3+"px";
+            document.getElementsByTagName("ul")[0].appendChild(liCreate);
+        }
+    }
+    function removeAllLi() {
+        var ul = document.getElementsByTagName("ul")[0];
+        var _li = ul.getElementsByTagName('li');
+        for(var i=_li.length-1;i>=0;i--){
+            ul.removeChild(_li[i]);
+        }
+    }
+    showLi(data);
+    function bubbleSort(arr) {
+        if(arr.length <= 1){
+            return arr;
+        }
+        for(var j =0;j<arr.length;j++){
+            for(var i=0;i<arr.length-1;i++){
+                if(parseInt(arr[i]) >parseInt(arr[i+1])){
+                    var tmp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = tmp;
+                    showLi(arr);
+                }
+            }
+        }
+        return arr;
+    }
+
+    leftIn.addEventListener("click",function () {
+        if (num.value>=10&&num.value<=100){
+            data.unshift(num.value);
+            showLi(data);
+        }else {
+            alert("The data you input isn't between 10 and 100,please rewrite:");
+        }
+
+    });
+    rightIn.addEventListener("click",function () {
+        if(10<=num.value&&num.value<=100){
+            data.push(num.value);
+            showLi(data);
+        }else{
+            alert("The data you input isn't between 10 and 100.please rewrite:");
+        }
+
+    });
+    leftOut.addEventListener("click",function () {
+        if(confirm("该值为"+data[0]+"你确定要删除吗？")){
+            data.shift();
+            showLi(data);
+        }else{
+            alert("取消删除");
+        }
+
+    });
+    rightOut.addEventListener("click",function () {
+        if(confirm("该值为"+data[data.length-1]+"你确定要删除吗？")){
+            data.pop();
+            showLi(data);
+        }
+
+    });
+
+    sort.addEventListener("click",function () {
+        bubbleSort(data);
+    });
+    queues.addEventListener("click",function (ev) {
+        ev = ev||window.event;
+        var target = ev.target || ev.srcElement;
+        if(target.nodeName.toLowerCase()=="li"){
+            if(confirm("你确定要删除吗？")){
+                queues.removeChild(target);
+            }
+        }
+    });
+</script>
+</body>
+</html>
