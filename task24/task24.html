@@ -8,7 +8,7 @@
         button{width: 70px;height: 30px}
         #queue{list-style: none}
         #queue li{display: inline;background: indianred;border: 1px solid lightslategrey;margin-right: 15px;
-            margin-top: 20px;padding: 10px;color: white}
+            padding: 10px;color: white;line-height: 50px}
     </style>
 </head>
 <body>
@@ -74,13 +74,13 @@
                 alert("取消删除");
             }
         }
-        function deleteNumClick() {
+        /*function deleteNumClick() {
             queues.addEventListener("click",function (e) {
                 if(event.target.nodeName.toLowerCase()=="li"){
-                    numList.removeChild(event.target);
+                    queues.removeChild(event.target);
                 }
             })
-        }
+        }*/
         leftIn.addEventListener("click",function () {
             insertNumBefore();
         });
@@ -97,7 +97,9 @@
             ev = ev||window.event;
             var target = ev.target || ev.srcElement;
             if(target.nodeName.toLowerCase()=="li"){
-                target.onclick = deleteNumClick();
+                if(confirm("你确定要删除吗？")){
+                    queues.removeChild(target);
+                }
             }
         });
     </script>
